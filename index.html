@@ -3,67 +3,96 @@
 <head>
   <meta charset="UTF-8">
   <title>Green Zone - القائمة</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
       font-family: "Cairo", sans-serif;
       direction: rtl;
-      text-align: center;
       margin: 0;
-      background: linear-gradient(135deg, #d4f1d4, #a8e6a8);
+      background: url("e:/menu/475530389_122204026730233475_7737326214324896744_n.jpg") no-repeat center center fixed;
+      background-size: cover; /* تخلي الصورة تغطي الصفحة */
+      color: #fff;
     }
+
     header {
-      background-color: #2e7d32;
+      background-color: rgba(27, 94, 32, 0.8); /* أخضر غامق شفاف */
       color: white;
-      padding: 20px;
-      border-radius: 0 0 20px 20px;
+      padding: 25px;
+      text-align: center;
+      border-bottom: 3px solid #fff;
     }
-    header h1 { margin: 0; font-size: 2.5em; }
+
+    header h1 {
+      margin: 0;
+      font-size: 2em;
+      letter-spacing: 2px;
+    }
+
     .menu-links {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
+      display: flex;
+      flex-direction: column;
       gap: 15px;
-      max-width: 500px;
+      max-width: 400px;
       margin: 30px auto;
+      padding: 0 15px;
     }
+
     a {
       display: block;
       padding: 15px;
-      background: white;
-      border-radius: 15px;
+      border-radius: 12px;
       text-decoration: none;
-      color: #2e7d32;
-      font-size: 1.3em;
+      font-size: 1.2em;
       font-weight: bold;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      transition: 0.3s;
+      text-align: center;
+      border: 2px solid #fff;
+      background: rgba(255, 255, 255, 0.3); /* أبيض شفاف */
+      color: #000000;
+      transition: all 0.3s ease;
     }
-    a:hover { background: #2e7d32; color: white; }
+
+    a:hover {
+      background: #1b5e20;
+      color: #fff;
+      transform: scale(1.05);
+    }
+
     footer {
-      margin-top: 30px;
-      padding: 15px;
-      background: #2e7d32;
+      margin-top: 40px;
+      padding: 20px;
+      background: rgba(27, 94, 32, 0.8);
       color: white;
-      border-radius: 20px 20px 0 0;
+      text-align: center;
+      font-size: 1,8em;
     }
   </style>
 </head>
 <body>
   <header>
     <h1>🌿 Green Zone 🌿</h1>
-    <p>اختر من القائمة</p>
+    <p>اختر قسم من القائمة</p>
   </header>
 
   <div class="menu-links">
-    <a href="hot.html">🥤 مشروبات ساخنة</a>
-    <a href="coffee.html">☕ قهوة</a>
-    <a href="milkshake.html">🥛 ميلك شيك</a>
-    <a href="juice.html">🍊 عصائر</a>
-    <a href="soda.html">🥤 ميكس صودا</a>
-    <a href="dessert.html">🍰 حلويات</a>
+    <a href="hot.html">🥤 مشروبات ساخنة_hot drink</a>
+    <a href="coffee.html">☕ قهوة_coffee</a>
+    <a href="milkshake.html">🥛 ميلك شيك_milkshake</a>
+    <a href="juice.html">🍊 عصائر_juice</a>
+    <a href="soda.html">🥤 ميكس صودا_mix soda</a>
+    <a href="cocktail.html">🥤كوكتيل_cocktail</a>
+    <a href="smoothie.html">🥤 سموزي _smoothie</a>
+    <a href="ice_coffee.html">🥤ايس كوفي _ice_coffee</a>
+      <a href="ice_cream.html">🥤ايس كريم _ice_cream</a>
+    <a href="waffle">🥤وافل_waffle</a>
+    <a href="dessert.html">🍰 حلويات_dessert</a>
+
   </div>
 
   <footer>
-    <p>Green Zone 🌱 – استمتع بأجواء مميزة</p>
+    <p>we are glad your here 
+      take your drink and be happy</p>
+
+
   </footer>
 </body>
 </html>
