@@ -1,99 +1,125 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <title>Green Zone - القائمة</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Green Zone Menu</title>
   <style>
     body {
       font-family: "Cairo", sans-serif;
-      direction: rtl;
       margin: 0;
-      background: url("475530389_122204026730233475_7737326214324896744_n.jpg") no-repeat center center fixed;
-      background-size: cover; /* تخلي الصورة تغطي الصفحة */
-      color: #fff;
-    }
-
-    header {
-      background-color: rgba(27, 94, 32, 0.8); /* أخضر غامق شفاف */
-      color: white;
-      padding: 25px;
-      text-align: center;
-      border-bottom: 3px solid #fff;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 2em;
-      letter-spacing: 2px;
-    }
-
-    .menu-links {
+      background-color: #ffffff; /* لون الخلفية */
+      color: #333;
       display: flex;
       flex-direction: column;
+      min-height: 100vh;
+      text-align: center;
+    }
+
+    /* اللوجو */
+    .logo {
+      margin: 20px auto 10px;
+    }
+    .logo img {
+      width: 150px;
+      height: auto;
+    }
+
+    /* أزرار المنيو */
+    .menu-links {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
       gap: 15px;
-      max-width: 400px;
-      margin: 30px auto;
-      padding: 0 15px;
+      margin: 20px 0;
     }
-
-    a {
-      display: block;
+    .menu-links a {
+      width: 80%;
       padding: 15px;
+      font-size: 18px;
       border-radius: 12px;
+      border: 2px solid #4caf50;
+      background: rgba(255, 255, 255, 0.7);
+      color: #333;
       text-decoration: none;
-      font-size: 1.2em;
-      font-weight: bold;
-      text-align: center;
-      border: 2px solid #fff;
-      background: rgba(255, 255, 255, 0.3); /* أبيض شفاف */
-      color: #000000;
-      transition: all 0.3s ease;
+      transition: 0.3s;
+      display: block;
     }
-
-    a:hover {
-      background: #1b5e20;
+    .menu-links a:hover {
+      background: #4caf50;
       color: #fff;
-      transform: scale(1.05);
     }
 
-    footer {
-      margin-top: 40px;
-      padding: 20px;
-      background: rgba(27, 94, 32, 0.8);
-      color: white;
-      text-align: center;
-      font-size: 1,8em;
+    /* النص الترحيبي */
+    .footer-text {
+      font-size: 14px;
+      margin-bottom: 5px;
+      color: #333;
+      font-weight: bold;
+    }
+
+    /* السوشيال ميديا */
+    .social {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 15px;
+      background: #4caf50;
+    }
+    .social a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 45px;
+      height: 45px;
+      background: #fff;
+      border-radius: 10px;
+      text-decoration: none;
+      font-size: 24px;
+      color: #4caf50;
+      transition: 0.3s;
+    }
+    .social a:hover {
+      background: #333;
+      color: #fff;
     }
   </style>
+  <!-- مكتبة Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
-  <header>
-    <h1>🌿 Green Zone 🌿</h1>
-    <p>اختر قسم من القائمة</p>
-  </header>
-
-  <div class="menu-links">
-    <a href="hot.html">🥤 مشروبات ساخنة_hot drink</a>
-    <a href="coffee.html">☕ قهوة_coffee</a>
-    <a href="milkshake.html">🥛 ميلك شيك_milkshake</a>
-    <a href="juice.html">🍊 عصائر_juice</a>
-    <a href="soda.html">🥤 ميكس صودا_mix soda</a>
-    <a href="cocktail.html">🥤كوكتيل_cocktail</a>
-    <a href="smoothie.html">🥤 سموزي _smoothie</a>
-    <a href="ice_coffee.html">🥤ايس كوفي _ice_coffee</a>
-      <a href="ice_cream.html">🥤ايس كريم _ice_cream</a>
-    <a href="waffle">🥤وافل_waffle</a>
-    <a href="dessert.html">🍰 حلويات_dessert</a>
-
+  <!-- اللوجو -->
+  <div class="logo">
+    <img src="Screenshot 2025-09-01 050745.png" alt="Green Zone Logo">
   </div>
 
-  <footer>
-    <p>we are glad your here 
-      take your drink and be happy</p>
+  <!-- أزرار المنيو -->
+  <div class="menu-links">
+    <a href="hot.html">🥤 مشروبات ساخنة - Hot Drinks</a>
+    <a href="coffee.html">☕ قهوة - Coffee</a>
+    <a href="milkshake.html">🥛 ميلك شيك - Milkshake</a>
+    <a href="juice.html">🍊 عصائر - Juice</a>
+    <a href="soda.html">🥤 ميكس صودا - Mix Soda</a>
+    <a href="cocktail.html">🍹 كوكتيل - Cocktail</a>
+    <a href="smoothie.html">🥤 سموزي - Smoothie</a>
+    <a href="ice_coffee.html">🥤 آيس كوفي - Ice Coffee</a>
+    <a href="zabado.html">🥤 زابادو- zabado </a>
+    <a href="ice_cream.html">🍦 آيس كريم - Ice Cream</a>
+    <a href="waffle.html">🧇 وافل - Waffle</a>
+    <a href="dessert.html">🍰 حلويات - Dessert</a>
+  </div>
 
+  <!-- النص -->
+  <div class="footer-text">
+    we are glad you're here, take your drink and be happy
+  </div>
 
-  </footer>
+  <!-- السوشيال -->
+  <div class="social">
+    <a href="https://www.tiktok.com/@greenzone920?_t=ZS-8zLtclcmJBI&_r=1" target="_blank"><i class="fab fa-tiktok"></i></a>
+    <a href="https://www.facebook.com/share/16JGsjjDKQ/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+  </div>
 </body>
 </html>
-
