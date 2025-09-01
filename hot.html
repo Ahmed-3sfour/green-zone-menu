@@ -1,30 +1,186 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <title>مشروبات ساخنة - Green Zone</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>منيو المشروبات الساخنة - جرين زوون</title>
   <style>
-    body { font-family: "Cairo", sans-serif; direction: rtl; text-align: center; background: #f9f9f9; }
-    header { background: #2e7d32; color: white; padding: 15px; border-radius: 0 0 20px 20px; }
-    .menu { max-width: 500px; margin: 20px auto; background: white; padding: 20px; border-radius: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
-    .item { display: flex; justify-content: space-between; padding: 10px; border-bottom: 1px solid #ddd; font-size: 1.2em; }
-    .price { color: #2e7d32; font-weight: bold; }
-    a { display: block; margin: 20px auto; padding: 10px; text-decoration: none; background: #2e7d32; color: white; width: 200px; border-radius: 10px; }
+    @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap');
+
+    body {
+      font-family: 'Cairo', sans-serif;
+      background-color: #ffffff;
+      margin: 0;
+      padding: 0;
+      color: #222;
+    }
+    header {
+      position: relative;
+      height: 350px;
+      overflow: hidden;
+      border-bottom-left-radius: 40px;
+      border-bottom-right-radius: 40px;
+    }
+    header img.bg-slider {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+      transition: opacity 1s ease-in-out;
+    }
+    header .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.6);
+    }
+    header .content {
+      position: relative;
+      text-align: center;
+      color: #fff;
+      padding-top: 80px;
+    }
+    header .content h1 {
+      margin: 0;
+      font-size: 32px;
+      color: #32a936;
+    }
+    header .content .sub-texts {
+      margin-top: 170px;
+    }
+    header .content p {
+      margin: 5px 0;
+      font-size: 18px;
+      color: #eee;
+    }
+    .logo-section {
+      text-align: center;
+      margin-top: 2px;
+    }
+    .logo-section img {
+      max-width: 150px;
+    }
+    .menu-container {
+      max-width: 900px;
+      margin: 40px auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 25px;
+      padding: 0 20px;
+    }
+    .menu-card {
+      background: rgba(12, 135, 49, 0.75);
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      padding: 15px;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      min-height: 55px; /* ↓ قللت الطول */
+    }
+    .menu-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    }
+    .menu-card h3 {
+      margin: 0;
+      font-size: 16px; /* ↓ صغرت خط أسماء المشروبات */
+      color: #ffffff;
+    }
+    .menu-card p {
+      font-size: 16px; /* ↓ صغرت خط السعر كمان */
+      font-weight: bold;
+      color: #000000;
+      margin: 0;
+    }
   </style>
 </head>
 <body>
   <header>
-    <h1>🥤 مشروبات ساخنة</h1>
+    <img class="bg-slider" src="2a96ce44-69c6-4e0a-89e1-5e315026f406.jpeg" alt="background">
+    <img class="bg-slider" src="9266a85a-9f99-40f2-8098-40d3a7cfc212.jpeg" alt="background" style="opacity:0">
+    <img class="bg-slider" src="15d09af7-5fd7-48eb-8cac-1d54af575e0b.jpeg" alt="background" style="opacity:0">
+    <img class="bg-slider" src="Rich and Robust Spiced Apple Tea Recipe for Cozy….jpeg" style="opacity:0">
+    <img class="bg-slider" src="sahlab.jpeg" alt="background" style="opacity:0">
+    <img class="bg-slider" src="c:\Users\Ahmed\Downloads\Cozy up with a cup of Homemade Hot Chocolate! This… (1).jpeg" alt="background" style="opacity:0">
+    <div class="overlay"></div>
+    <div class="content">
+      <div class="sub-texts">
+        <p>Hot Drinks</p>
+        <p>مشروبات ساخنة</p>
+      </div>
+    </div>
   </header>
 
-  <div class="menu">
-    <div class="item">شاي أسود <span class="price">15 ج</span></div>
-    <div class="item">شاي أخضر <span class="price">18 ج</span></div>
-    <div class="item">شوكولاتة ساخنة <span class="price">30 ج</span></div>
-    <div class="item">سحلب <span class="price">28 ج</span></div>
-    <div class="item">ينسون <span class="price">20 ج</span></div>
+  <!-- المنيو -->
+  <div class="menu-container">
+    <div class="menu-card">
+      <h3>شاي</h3>
+      <p>20 ج.م</p>
+    </div>
+    <div class="menu-card">
+      <h3>شاي فليفر</h3>
+      <p>28 ج.م</p>
+    </div>
+    <div class="menu-card">
+      <h3>شاي أخضر</h3>
+      <p>125 ج.م</p>
+    </div>
+    <div class="menu-card">
+      <h3>شاي حليب</h3>
+      <p>30 ج.م</p>
+    </div>
+    <div class="menu-card">
+      <h3>اعشاب جرين زوون</h3>
+      <p>45 ج.م</p>
+    </div>
+    <div class="menu-card">
+      <h3>قرفة حليب</h3>
+      <p>30 ج.م</p>
+    </div>
+    <div class="menu-card">
+      <h3>هوت سدر</h3>
+      <p>40 ج.م</p>
+    </div>
+    <div class="menu-card">
+      <h3>سحلب</h3>
+      <p>40 ج.م</p>
+    </div>
+    <div class="menu-card">
+      <h3>سحلب مكسرات</h3>
+      <p>50 ج.م</p>
+    </div>
+    <div class="menu-card">
+      <h3>سحلب فواكة</h3>
+      <p>60 ج.م</p>
+    </div>
+    <div class="menu-card">
+      <h3>هوت شوكلت</h3>
+      <p>50 ج.م</p>
+    </div>
+    <div class="menu-card">
+      <h3>هوت أوريو</h3>
+      <p>60 ج.م</p>
+    </div>
   </div>
 
-  <a href="index.html">⬅ العودة للقائمة الرئيسية</a>
+  <script>
+    const slides = document.querySelectorAll('.bg-slider');
+    let current = 0;
+
+    setInterval(() => {
+      slides[current].style.opacity = 0;
+      current = (current + 1) % slides.length;
+      slides[current].style.opacity = 1;
+    }, 5000);
+  </script>
 </body>
 </html>
