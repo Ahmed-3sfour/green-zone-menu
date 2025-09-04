@@ -9,7 +9,7 @@
 
     body {
       font-family: 'Cairo', sans-serif;
-      background-color: #ffffff;
+      background-color: #000000;
       margin: 0;
       padding: 0;
       color: #222;
@@ -74,9 +74,10 @@
       padding: 0 20px;
     }
     .menu-card {
-      background: rgba(12, 135, 49, 0.75);
+   background-color: #15ff004d;
+
       border-radius: 20px;
-      overflow: hidden;
+   
       box-shadow: 0 6px 20px rgba(0,0,0,0.1);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       padding: 15px;
@@ -96,11 +97,33 @@
       color: #ffffff;
     }
     .menu-card p {
-      font-size: 16px; /* ↓ صغرت خط السعر كمان */
+      font-size: 14px; /* ↓ صغرت خط السعر كمان */
       font-weight: bold;
-      color: #000000;
+      color: #f2ff00;
       margin: 0;
     }
+    .menu-container {
+  max-width: 900px;
+  margin: 40px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 25px;
+  padding: 0 20px;
+}
+
+/* 📱 في الموبايل: خليهم صفين (2 عناصر جنب بعض) */
+@media (max-width: 768px) {
+  .menu-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px; /* تقلل المسافة شوية في الموبايل */
+  }
+    .menu-card h3 {
+      margin: 0;
+      font-size: 13px; /* ↓ صغرت خط أسماء المشروبات */
+      
+    }
+}
+
   </style>
 </head>
 <body>
@@ -124,51 +147,51 @@
   <div class="menu-container">
     <div class="menu-card">
       <h3>شاي</h3>
-      <p>20 ج.م</p>
+      <p>20 </p>
     </div>
     <div class="menu-card">
       <h3>شاي فليفر</h3>
-      <p>28 ج.م</p>
+      <p>28</p>
     </div>
     <div class="menu-card">
       <h3>شاي أخضر</h3>
-      <p>25 ج.م</p>
+      <p>25</p>
     </div>
     <div class="menu-card">
       <h3>شاي حليب</h3>
-      <p>30 ج.م</p>
+      <p>30</p>
     </div>
     <div class="menu-card">
       <h3>اعشاب جرين زوون</h3>
-      <p>45 ج.م</p>
+      <p>45</p>
     </div>
     <div class="menu-card">
       <h3>قرفة حليب</h3>
-      <p>30 ج.م</p>
+      <p>30</p>
     </div>
     <div class="menu-card">
       <h3>هوت سدر</h3>
-      <p>40 ج.م</p>
+      <p>40</p>
     </div>
     <div class="menu-card">
       <h3>سحلب</h3>
-      <p>40 ج.م</p>
+      <p>40</p>
     </div>
     <div class="menu-card">
       <h3>سحلب مكسرات</h3>
-      <p>50 ج.م</p>
+      <p>50 </p>
     </div>
     <div class="menu-card">
       <h3>سحلب فواكة</h3>
-      <p>60 ج.م</p>
+      <p>60</p>
     </div>
     <div class="menu-card">
       <h3>هوت شوكلت</h3>
-      <p>50 ج.م</p>
+      <p>50</p>
     </div>
     <div class="menu-card">
       <h3>هوت أوريو</h3>
-      <p>60 ج.م</p>
+      <p>60</p>
     </div>
   </div>
 
@@ -184,4 +207,3 @@
   </script>
 </body>
 </html>
-
