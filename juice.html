@@ -1,30 +1,231 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <title>عصائر - Green Zone</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>منيو المشروبات الساخنة - جرين زوون</title>
   <style>
-    body { font-family: "Cairo", sans-serif; direction: rtl; text-align: center; background: #f9f9f9; }
-    header { background: #2e7d32; color: white; padding: 15px; border-radius: 0 0 20px 20px; }
-    .menu { max-width: 500px; margin: 20px auto; background: white; padding: 20px; border-radius: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
-    .item { display: flex; justify-content: space-between; padding: 10px; border-bottom: 1px solid #ddd; font-size: 1.2em; }
-    .price { color: #2e7d32; font-weight: bold; }
-    a { display: block; margin: 20px auto; padding: 10px; text-decoration: none; background: #2e7d32; color: white; width: 200px; border-radius: 10px; }
+    @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap');
+
+    body {
+      font-family: 'Cairo', sans-serif;
+      background-color: #000000;
+      margin: 0;
+      padding: 0;
+      color: #222;
+    }
+    header {
+      position: relative;
+      height: 350px;
+      overflow: hidden;
+      border-bottom-left-radius: 40px;
+      border-bottom-right-radius: 40px;
+    }
+    header img.bg-slider {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+      transition: opacity 1s ease-in-out;
+    }
+    header .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.6);
+    }
+    header .content {
+      position: relative;
+      text-align: center;
+      color: #fff;
+      padding-top: 80px;
+    }
+    header .content h1 {
+      margin: 0;
+      font-size: 32px;
+      color: #32a936;
+    }
+    header .content .sub-texts {
+      margin-top: 170px;
+    }
+    header .content p {
+      margin: 5px 0;
+      font-size: 18px;
+      color: #eee;
+    }
+    .logo-section {
+      text-align: center;
+      margin-top: 2px;
+    }
+    .logo-section img {
+      max-width: 150px;
+    }
+    .menu-container {
+      max-width: 900px;
+      margin: 40px auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 25px;
+      padding: 0 20px;
+    }
+    .menu-card {
+   background-color: #15ff004d;
+
+      border-radius: 20px;
+   
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      padding: 15px;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      min-height: 55px; /* ↓ قللت الطول */
+    }
+    .menu-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    }
+    .menu-card h3 {
+      margin: 0;
+      font-size: 16px; /* ↓ صغرت خط أسماء المشروبات */
+      color: #ffffff;
+    }
+    .menu-card p {
+      font-size: 14px; /* ↓ صغرت خط السعر كمان */
+      font-weight: bold;
+      color: #f2ff00;
+      margin: 0;
+    }
+    .menu-container {
+  max-width: 900px;
+  margin: 40px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 25px;
+  padding: 0 20px;
+}
+
+/* 📱 في الموبايل: خليهم صفين (2 عناصر جنب بعض) */
+@media (max-width: 768px) {
+  .menu-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px; /* تقلل المسافة شوية في الموبايل */
+  }
+    .menu-card h3 {
+      margin: 0;
+      font-size: 13px; /* ↓ صغرت خط أسماء المشروبات */
+      
+    }
+}
+
   </style>
 </head>
 <body>
   <header>
-    <h1>🍊 عصائر طبيعية</h1>
+    <img class="bg-slider" src="عصير ليمون.jpg" alt="background">
+    <img class="bg-slider" src="0582db31-b9cd-4842-a59a-9d9d1c5fb74e.jpg" alt="background" style="opacity:0">
+    <img class="bg-slider" src="f6fddaf1-d733-44d2-b164-95357acdb09a.jpg" alt="background" style="opacity:0">
+    <img class="bg-slider" src="b3905768-8932-4558-8639-e17adf807cf5.jpg" style="opacity:0">
+    <img class="bg-slider" src="Avocado Smoothie Recipe with Benefits  English….jpg" alt="background" style="opacity:0">
+    <img class="bg-slider" src="__Mariella Mokdad__ _ _عصير افوكادو بالقشطة و….jpg" alt="background" style="opacity:0">
+     <img class="bg-slider" src="a2c558d4-9131-49a0-848f-a16d8ac451ed.jpg" alt="background" style="opacity:0">
+      <img class="bg-slider" src="8c1c3c07-ea7a-4e6b-bbfb-a0ddf9fb0913.jpg" alt="background" style="opacity:0">
+       <img class="bg-slider" src="90c0ed98-3a3c-4111-9e75-6bd006832551.jpg" alt="background" style="opacity:0">
+        <img class="bg-slider" src="عصير كيوي.jpg" alt="background" style="opacity:0">
+         <img class="bg-slider" src="e0d09cb5-9ca8-4031-9619-b1ad63bd6f3d.jpg" alt="background" style="opacity:0">
+          <img class="bg-slider" src="روقان.jpg" alt="background" style="opacity:0">
+    <div class="overlay"></div>
+    <div class="content">
+      <div class="sub-texts">
+        <p>juice</p>
+        <p>عصائر</p>
+      </div>
+    </div>
   </header>
 
-  <div class="menu">
-    <div class="item">عصير برتقال <span class="price">25 ج</span></div>
-    <div class="item">عصير مانجو <span class="price">30 ج</span></div>
-    <div class="item">عصير رمان <span class="price">28 ج</span></div>
-    <div class="item">ليمون بالنعناع <span class="price">26 ج</span></div>
-    <div class="item">عصير جوافة <span class="price">22 ج</span></div>
+  <!-- المنيو -->
+  <div class="menu-container">
+  <div class="menu-card">
+    <h3>ليمون</h3>
+    <p>40</p>
   </div>
+  <div class="menu-card">
+    <h3>ليمون نعناع</h3>
+    <p>50</p>
+  </div>
+  <div class="menu-card">
+    <h3>برتقال</h3>
+    <p>60</p>
+  </div>
+  <div class="menu-card">
+    <h3>اناناس</h3>
+    <p>60</p>
+  </div>
+  <div class="menu-card">
+    <h3>موز حليب</h3>
+    <p>65</p>
+  </div>
+  <div class="menu-card">
+    <h3>افوكادو</h3>
+    <p>85</p>
+  </div>
+  <div class="menu-card">
+    <h3>افوكادو مكسرات</h3>
+    <p>100</p>
+  </div>
+  <div class="menu-card">
+    <h3>مانجو</h3>
+    <p>60</p>
+  </div>
+  <div class="menu-card">
+    <h3>فراوله</h3>
+    <p>60</p>
+  </div>
+  <div class="menu-card">
+    <h3>خوخ</h3>
+    <p>60</p>
+  </div>
+  <div class="menu-card">
+    <h3>كيوي</h3>
+    <p>70</p>
+  </div>
+  <div class="menu-card">
+    <h3>بطيخ</h3>
+    <p>60</p>
+  </div>
+  <div class="menu-card">
+    <h3>بلح حليب</h3>
+    <p>70</p>
+  </div>
+  <div class="menu-card">
+    <h3>بلح ( مكسرات - عسل )</h3>
+    <p>85</p>
+  </div>
+  <div class="menu-card">
+    <h3>جوافه</h3>
+    <p>60</p>
+  </div>
+</div>
 
-  <a href="index.html">⬅ العودة للقائمة الرئيسية</a>
+  
+  
+</div>
+
+  <script>
+    const slides = document.querySelectorAll('.bg-slider');
+    let current = 0;
+
+    setInterval(() => {
+      slides[current].style.opacity = 0;
+      current = (current + 1) % slides.length;
+      slides[current].style.opacity = 1;
+    }, 3000);
+  </script>
 </body>
 </html>
