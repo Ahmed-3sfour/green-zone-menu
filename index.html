@@ -1,109 +1,155 @@
-  <!DOCTYPE html>
-  <html lang="ar" dir="rtl">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Green Zone Menu</title>
-    <style>
-      body {
-        font-family: "Cairo", sans-serif;
-        margin: 0;
-        background-color: #000000; /* خلفية سودة */
-        color: #fff;
-        text-align: center;
-      }
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Green Zone Menu</title>
+  <style>
+    body {
+      font-family: "Cairo", sans-serif;
+      margin: 0;
+      background-color: #000000;
+      color: #fff;
+      text-align: center;
+    }
 
-      /* اللوجو */
-      .logo {
-        margin: 5px auto 2px;
-      }
-      .logo img {
-        width: 200px;
-        height: auto;
-        border-radius: 20px;
-      }
+    /* اللوجو */
+    .logo {
+      margin: 5px auto 2px;
+    }
+    .logo img {
+      width: 160px;
+      height: auto;
+      border-radius: 20px;
+    }
 
-      /* شريط الروابط العلوي */
-      .top-menu {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        background: #000;
-        padding: 10px;
-        border-bottom: 1px solid #222;
-      }
-      .top-menu a {
-        color: #fff;
-        text-decoration: none;
-        font-size: 16px;
-        font-weight: bold;
-        padding: 8px 5px;
-        position: relative;
-      }
-      .top-menu a:hover {
-        color: #4caf50;
-      }
-      .top-menu a.active {
-        color: #4caf50;
-      }
-      .top-menu a.active::after {
-        content: "";
-        position: absolute;
-        left: 0;
-        bottom: -5px;
-        width: 100%;
-        height: 3px;
-        background: #4caf50; /* الخط الأخضر */
-        border-radius: 2px;
-      }
-      .top-menu i {
-        font-size: 22px;
-      }
+    /* شريط الروابط */
+    .top-menu {
+      display: flex;
+      overflow-x: auto;
+      white-space: nowrap;
+      background: #000;
+      border-bottom: 2px solid #4caf50;
+    }
 
-      /* النص الترحيبي */
-      .footer-text {
-        font-size: 16px;
-        margin: 100px 10px;
-        color: #ffffff;
-        font-weight: bold;
-      }
+    .top-menu::-webkit-scrollbar {
+      height: 6px;
+    }
+    .top-menu::-webkit-scrollbar-thumb {
+      background: #4caf50;
+      border-radius: 10px;
+    }
 
-      /* السوشيال */
-      .social {
-        display: flex;
-        justify-content: center;
-        gap: 20px;
-        padding: 15px;
-        background: #4caf50;
-      }
-      .social a {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 45px;
-        height: 45px;
-        background: #000000;
-        border-radius: 10px;
-        text-decoration: none;
-        font-size: 24px;
-        color: #4caf50;
-        transition: 0.3s;
-      }
-      .social a:hover {
-        background: #333;
-        color: #fff;
-      }
-    </style>
-    <!-- مكتبة Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-  </head>
-  <body>
-    <!-- اللوجو -->
-    <div class="logo">
-      <img src="Screenshot 2025-09-01 050745.png" alt="Green Zone Logo">
-    </div>
+    .top-menu a {
+      flex: 0 0 auto;
+      color: #fff;
+      text-decoration: none;
+      padding: 12px 18px;
+      font-size: 14px;
+      text-align: center;
+      display: inline-block;
+      border-bottom: 2px solid transparent;
+      transition: 0.3s;
+    }
 
-    <!-- شريط الروابط -->
+    .top-menu a.active {
+      border-bottom: 2px solid #4caf50;
+      font-weight: bold;
+    }
+
+    .top-menu a:hover {
+      background: #111;
+    }
+
+    /* الصورة الوسطى */
+    .middle-image {
+      margin: 40px auto;
+    }
+    .middle-image img {
+      width: 250px;
+      max-width: 90%;
+      border-radius: 20px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.9); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    /* النص */
+    .footer-text {
+      font-size: 12px;
+      margin: 30px 10px;
+      color: #ffffff;
+      font-weight: bold;
+    }
+
+    /* السوشيال */
+    .social {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 15px;
+      background: #4caf50;
+      position: relative;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      z-index: 999;
+      animation: slideUp 1s ease-out;
+    }
+
+    .social a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 45px;
+      height: 45px;
+      background: #000000;
+      border-radius: 10px;
+      text-decoration: none;
+      font-size: 24px;
+      color: #4caf50;
+      transition: 0.3s;
+      animation: pulse 2s infinite;
+    }
+
+    .social a:hover {
+      background: #333;
+      color: #fff;
+      transform: scale(1.1);
+    }
+
+    /* الحركة من تحت */
+    @keyframes slideUp {
+      from {
+        transform: translateY(100%);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    /* حركة النبض */
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
+  </style>
+  <!-- مكتبة Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+  <!-- اللوجو -->
+  <div class="logo">
+    <img src="Screenshot 2025-09-06 051118.png" alt="Green Zone Logo">
+  </div>
+
   <!-- شريط التنقل -->
   <div class="top-menu">
     <a href="index.html" class="active"><i class="fa fa-home"></i></a>
@@ -121,87 +167,20 @@
     <a href="dessert.html">حلويات <br> Dessert</a>
   </div>
 
-  <style>
-  .top-menu {
-    display: flex;
-    overflow-x: auto;   /* يخلي الشريط يتمرر */
-    white-space: nowrap;
-    background: #000;
-    border-bottom: 2px solid #4caf50;
-  }
+  <!-- الصورة الوسطى -->
+  <div class="middle-image">
+    <img src="Screenshot 2025-09-01 050745.png" alt="">
+  </div>
 
-  .top-menu::-webkit-scrollbar {
-    height: 6px; /* عرض الشريط */
-  }
-  .top-menu::-webkit-scrollbar-thumb {
-    background: #4caf50; /* لون الشريط */
-    border-radius: 10px;
-  }
+  <!-- النص -->
+  <div class="footer-text">
+    ,we are glad you're here<br> take your drink and be happy
+  </div>
 
-  .top-menu a {
-    flex: 0 0 auto;
-    color: #fff;
-    text-decoration: none;
-    padding: 12px 18px;
-    font-size: 14px;
-    text-align: center;
-    display: inline-block;
-    border-bottom: 2px solid transparent;
-    transition: 0.3s;
-  }
-
-  .top-menu a.active {
-    border-bottom: 2px solid #4caf50; /* الخط الأخضر تحت الصفحة المفتوحة */
-    font-weight: bold;
-  }
-
-  .top-menu a:hover {
-    background: #111;
-  }
-  </style>
-
-
-
-    <!-- النص -->
-    <div class="footer-text">
-      we are glad you're here,<br> take your drink and be happy
-    </div>
-
-    <!-- السوشيال -->
-    <!-- السوشيال -->
+  <!-- السوشيال -->
   <div class="social">
     <a href="https://www.tiktok.com/@greenzone920?_t=ZS-8zLtclcmJBI&_r=1" target="_blank"><i class="fab fa-tiktok"></i></a>
     <a href="https://www.facebook.com/share/16JGsjjDKQ/" target="_blank"><i class="fab fa-facebook-f"></i></a>
   </div>
-
-  <style>
-  .social {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    padding: 15px;
-    background: #4caf50;
-    position: fixed;   /* تثبيت أسفل الشاشة */
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    z-index: 999;      /* يفضل يظهر فوق أي عنصر */
-  }
-  .social a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 45px;
-    height: 45px;
-    background: #000000;
-    border-radius: 10px;
-    text-decoration: none;
-    font-size: 24px;
-    color: #4caf50;
-    transition: 0.3s;
-  }
-  .social a:hover {
-    background: #333;
-    color: #fff;
-  }
-  </style>
+</body>
+</html>
